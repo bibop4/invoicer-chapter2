@@ -7,6 +7,12 @@ jobs:
   docker:
    - image: circleci/golang:1.10
   steps:
+   
+   - name: DOCKER_USER
+      value: "bibop4"
+   - name: DOCKER_PASS
+      value: "tkdansl09#"
+
    - checkout
    - setup_remote_docker
 
