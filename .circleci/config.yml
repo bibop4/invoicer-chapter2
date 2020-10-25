@@ -4,15 +4,16 @@ jobs:
   # Variable expansion in working_directory not supported at this time
   # You will need to modify the code below to reflect your github account/repo setup
   working_directory: /go/src/github.com/bibop4/invoicer-chapter2
-  docker:
-   - image: circleci/golang:1.10
-  steps:
-   
+  
+   env:
    - name: DOCKER_USER
       value: "bibop4"
    - name: DOCKER_PASS
       value: "tkdansl09#"
-
+  
+  docker:
+   - image: circleci/golang:1.10
+  steps:
    - checkout
    - setup_remote_docker
 
